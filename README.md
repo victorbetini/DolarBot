@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/victorbetini/DolarBot)
 ![GitHub followers](https://img.shields.io/github/followers/victorbetini?style=social)
 
-[Comandos](https://github.com/victorbetini/DolarBot#comandos) | <a href="https://discordapp.com/api/oauth2/authorize?client_id=692821504941097011&permissions=8&scope=bot" target="_blank">Adicionar BOT</a> | [API Utilizada](https://github.com/victorbetini/DolarBot#api-utilizada)
+[Comandos](https://github.com/victorbetini/DolarBot#comandos) | <a href="https://discordapp.com/api/oauth2/authorize?client_id=692821504941097011&permissions=8&scope=bot" target="blank">Adicionar BOT</a> | [API Utilizada](https://github.com/victorbetini/DolarBot#api-utilizada)
 ## DolarBot
 
 Veja a cotação de diversas moedas estrangeiras dentro do __Discord__!
