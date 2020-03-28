@@ -6,6 +6,8 @@
 
 Veja a cotação de diversas moedas estrangeiras dentro do __Discord__!
 
+Bot feito utilizando a biblioteca [DicrodJS](https://discord.js.org/#/), o módulo [Axios](https://github.com/axios/axios) e a [Awesome API](https://docs.awesomeapi.com.br/api-de-moedas)
+
 ### Cotações Suportadas
 
 - USD
