@@ -1,0 +1,23 @@
+{
+  "name": "dolarbot",
+  "version": "1.0.0",
+  "description": "Um BOT de Discord que mostra cotação de diversas moedas estrangeiras",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorbetini/DolarBot.git"
+  },
+  "author": "victorbetini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorbetini/DolarBot/issues"
+  },
+  "homepage": "https://github.com/victorbetini/DolarBot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.1.1"
+  }
+}
