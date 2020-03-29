@@ -15,6 +15,10 @@ client.on('ready', () => {
     client.user.setActivity('$help - para ver comandos', { type: 'PLAYING' });
 });
 
+client.on('guildCreate', (guild) => {
+    console.log(`${client.user.username} - foi adicionado em ${guild.name} | ${client.guilds.size}`);
+})
+
 client.on('message', async message => {
     if (message.content.startsWith(`${prefix}dolar`)) {
         try {
