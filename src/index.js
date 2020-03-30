@@ -23,8 +23,8 @@ client.on('message', async message => {
     if (message.content.startsWith(`${prefix}dolar`)) {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
-                .then(function (response) {
-                    message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
+                .then(async function (response) {
+                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
                     console.log(response.data.results.currencies.USD.buy);
                 });
         } catch (err) {
