@@ -54,22 +54,22 @@ client.on('message', async message => {
         }
     }
 
-    if (message.content.startsWith(`${prefix}cad`) || message.content.startsWith(`${prefix}dolar canadense`)) {
-        try {
-            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
-                .then(function (response) {
-                    message.channel.send('Valor do Dolar Canadense (CAD): ``' + formatter.format(response.data.results.currencies.CAD.buy) + "``");
-                });
-        } catch (err) {
-            message.channel.send('Erro!');
-        }
-    }
+    // if (message.content.startsWith(`${prefix}cad`) || message.content.startsWith(`${prefix}dolar canadense`)) {
+    //     try {
+    //         axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
+    //             .then(function (response) {
+    //                 message.channel.send('Valor do Dolar Canadense (CAD): ``' + formatter.format(response.data.results.currencies.CAD.buy) + "``");
+    //             });
+    //     } catch (err) {
+    //         message.channel.send('Erro!');
+    //     }
+    // }
 
     if (message.content.startsWith(`${prefix}libra`)) {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
-                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GPB.buy) + "``");
+                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GBP.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
