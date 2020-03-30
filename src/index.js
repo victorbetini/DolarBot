@@ -7,7 +7,7 @@ const prefix = config.prefix;
 const formatter = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-    minimumFractionDigits: 3
+    minimumFractionDigits: 2
 });
 
 client.on('ready', () => {
