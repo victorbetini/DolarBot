@@ -69,7 +69,7 @@ client.on('message', async message => {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
-                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.GBP.bid) + "``");
+                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.GBP.bid) + "``");+
                 });
         } catch (err) {
             message.channel.send('Erro!');
