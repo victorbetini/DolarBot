@@ -34,9 +34,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}euro`) || message.content.startsWith(`${prefix}eur`)) {
         try {
-            axios.get('https://economia.awesomeapi.com.br/json/all')
+            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
-                    message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.EUR.bid) + "``");
+                    message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.results.currencies.EUR.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -45,9 +45,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}bitcoin`) || message.content.startsWith(`${prefix}btc`)) {
         try {
-            axios.get('https://economia.awesomeapi.com.br/json/all')
+            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
-                    message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.BTC.bid) + "``");
+                    message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.results.currencies.BTC.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -56,9 +56,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}cad`) || message.content.startsWith(`${prefix}dolar canadense`)) {
         try {
-            axios.get('https://economia.awesomeapi.com.br/json/all')
+            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
-                    message.channel.send('Valor do Dolar Canadense (CAD): ``' + formatter.format(response.data.CAD.bid) + "``");
+                    message.channel.send('Valor do Dolar Canadense (CAD): ``' + formatter.format(response.data.results.currencies.GPB.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -67,7 +67,7 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}libra`)) {
         try {
-            axios.get('https://economia.awesomeapi.com.br/json/all')
+            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
                 .then(function (response) {
                     message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.GBP.bid) + "``");
                 });
