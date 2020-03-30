@@ -23,11 +23,11 @@ Todas são calculadas pelo valor de compra (bid) e passadas para o valor em reai
 #### Prefixo: ``$`` 
 
 - __help__ - mostra todos os comandos do __bot__ e ajuda em geral
-- ``dolar`` - cotação atual do dolar `(um pra um)`
-- ``euro`` - cotação atual do euro `(um pra um)`
-- ``bitcoin`` - cotação atual do BitCoin `(um pra um)`
-- ``cad`` - cotação atual do dolar canadense `(um pra um)`
-- ``libra`` - cotação atual da libra `(um pra um)`
+- ``dolar`` - cotação atual do dolar
+- ``euro`` - cotação atual do euro
+- ``bitcoin`` - cotação atual do BitCoin
+- ``cad`` - cotação atual do dolar canadense
+- ``libra`` - cotação atual da libra
 
 ## Adicionando o BOT
 
