@@ -13,7 +13,6 @@ Bot feito utilizando a biblioteca [DicrodJS](https://discord.js.org/#/), o módu
 - USD
 - EUR
 - BTC
-- CAD
 - GBP
 
 Todas são calculadas pelo valor de compra (bid) e passadas para o valor em reais (BRL)
