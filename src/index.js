@@ -24,7 +24,7 @@ client.on('message', async message => {
         try {
             axios.get(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda='USD'&@dataCotacao='04 - 01 - 2020'&$top=1&$format=json&$select=cotacaoCompra,cotacaoVenda`)
                 .then(async function (response) {
-                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.value.cotacaoCompra) + "``");
+                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.value[0].cotacaoCompra) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
