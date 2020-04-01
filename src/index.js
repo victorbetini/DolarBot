@@ -24,7 +24,7 @@ client.on('message', async message => {
         try {
             axios.get(`https://api.hgbrasil.com/finance?key=9eb7e23d`)
                 .then(async function (response) {
-                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
+                    message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -35,7 +35,7 @@ client.on('message', async message => {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    await message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.results.currencies.EUR.buy) + "``");
+                    message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.results.currencies.EUR.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -46,7 +46,7 @@ client.on('message', async message => {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    await message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.results.currencies.BTC.buy) + "``");
+                    message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.results.currencies.BTC.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -68,7 +68,7 @@ client.on('message', async message => {
         try {
             axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    await message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GBP.buy) + "``");
+                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GBP.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
