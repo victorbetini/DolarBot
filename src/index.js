@@ -22,10 +22,9 @@ client.on('guildCreate', (guild) => {
 client.on('message', async message => {
     if (message.content.startsWith(`${prefix}dolar`)) {
         try {
-            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
+            axios.get(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda='USD'&@dataCotacao='04 - 01 - 2020'&$top=1&$format=json&$select=cotacaoCompra,cotacaoVenda`)
                 .then(async function (response) {
-                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
-                    console.log(response.data.results.currencies.USD.buy);
+                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.value.cotacaoCompra) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
