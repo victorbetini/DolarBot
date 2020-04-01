@@ -22,9 +22,9 @@ client.on('guildCreate', (guild) => {
 client.on('message', async message => {
     if (message.content.startsWith(`${prefix}dolar`)) {
         try {
-            axios.get(`https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda='USD'&@dataCotacao='04 - 01 - 2020'&$top=1&$format=json&$select=cotacaoCompra,cotacaoVenda`)
+            axios.get(`https://api.hgbrasil.com/finance?key=9eb7e23d`)
                 .then(async function (response) {
-                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.value[0].cotacaoCompra) + "``");
+                    await message.channel.send('Valor do Dolar (USD): ``' + formatter.format(response.data.results.currencies.USD.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -33,9 +33,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}euro`) || message.content.startsWith(`${prefix}eur`)) {
         try {
-            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
+            axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.results.currencies.EUR.buy) + "``");
+                    await message.channel.send('Valor do Euro (EUR): ``' + formatter.format(response.data.results.currencies.EUR.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -44,9 +44,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}bitcoin`) || message.content.startsWith(`${prefix}btc`)) {
         try {
-            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
+            axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.results.currencies.BTC.buy) + "``");
+                    await message.channel.send('Valor do Bitcoin (BTC): ``' + formatter.format(response.data.results.currencies.BTC.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -66,9 +66,9 @@ client.on('message', async message => {
 
     if (message.content.startsWith(`${prefix}libra`)) {
         try {
-            axios.get('https://api.hgbrasil.com/finance?key=b38a1ead')
+            axios.get('https://api.hgbrasil.com/finance?key=9eb7e23d')
                 .then(function (response) {
-                    message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GBP.buy) + "``");
+                    await message.channel.send('Valor da Libra (GBP): ``' + formatter.format(response.data.results.currencies.GBP.buy) + "``");
                 });
         } catch (err) {
             message.channel.send('Erro!');
@@ -88,8 +88,8 @@ client.on('message', async message => {
                     { name: '$cad', value: 'Mostra a cotação do dolar canadense atual' },
                     { name: '$libra', value: 'Mostra a cotação da libra atual' },
                 )
-                .setFooter(client.user.username + ' - powered by: https://docs.awesomeapi.com.br/',
-                    'https://gblobscdn.gitbook.com/spaces%2F-LDDJfbHDy3v965nUzNO%2Favatar.png?generation=1527103896608667&alt=media');
+                // .setFooter(client.user.username + ' - powered by: https://docs.awesomeapi.com.br/',
+                //     'https://gblobscdn.gitbook.com/spaces%2F-LDDJfbHDy3v965nUzNO%2Favatar.png?generation=1527103896608667&alt=media');
 
             message.channel.send(helpEmbed);
 
