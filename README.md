@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/victorbetini/DolarBot)
 ![GitHub followers](https://img.shields.io/github/followers/victorbetini?style=social)
 
-[Comandos](https://github.com/victorbetini/DolarBot#comandos) | <a href="https://discordapp.com/api/oauth2/authorize?client_id=692821504941097011&permissions=8&scope=bot" target="blank">Adicionar BOT</a> | [API Utilizada](https://github.com/victorbetini/DolarBot#api-utilizada)
+[Comandos](https://github.com/victorbetini/DolarBot#comandos) | <a href="https://discordapp.com/api/oauth2/authorize?client_id=692821504941097011&permissions=8&scope=bot" target="blank">Adicionar BOT</a>
 ## DolarBot
 
 Veja a cotação de diversas moedas estrangeiras dentro do __Discord__!
@@ -26,7 +26,6 @@ Todas são calculadas pelo valor de compra (bid) e passadas para o valor em reai
 - ``dolar`` - cotação atual do dolar
 - ``euro`` - cotação atual do euro
 - ``bitcoin`` - cotação atual do BitCoin
-- ``cad`` - cotação atual do dolar canadense
 - ``libra`` - cotação atual da libra
 
 ## Adicionando o BOT
@@ -35,7 +34,7 @@ Para adicionar o BOT ao seu servidor [clique aqui](https://discordapp.com/api/oa
 
 ## API Utilizada
 
-Neste projeto foi utilizada a [Awesome API](https://docs.awesomeapi.com.br/api-de-moedas) de cotações que no momento é totalmente _free_, e foi criada por [Ranielly Ferreira](https://github.com/raniellyferreira) [(Repositório)](https://github.com/raniellyferreira/economy-api)
+Neste projeto foi utilizada a [HG Finance](https://hgbrasil.com/status/finance) de cotações, e foi criada por [Hugo Demiglio](https://github.com/hugodemiglio)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
