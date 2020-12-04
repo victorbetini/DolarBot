@@ -6,7 +6,7 @@
 
 Veja a cotação de diversas moedas estrangeiras dentro do __Discord__!
 
-Bot feito utilizando a biblioteca [DicrodJS](https://discord.js.org/#/), o módulo [Axios](https://github.com/axios/axios) e a [HG API](https://hgbrasil.com/)
+Bot feito utilizando a biblioteca [DicordJS](https://discord.js.org/#/), o módulo [Axios](https://github.com/axios/axios) e a [HG API](https://hgbrasil.com/)
 
 ### Cotações Suportadas
 
